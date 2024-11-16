@@ -1,0 +1,17 @@
+{% load mptt_tags %}
+
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Категории</h5>
+      {% full_tree_for_model blog.Category as categories %}
+      <p class="card-text">
+        <ul>
+            {% for category in categories %}
+                <li>
+                 <a href="{{ article.category.get_absolute_url }}">{{ category.title }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+      </p>
+    </div>
+  </div>

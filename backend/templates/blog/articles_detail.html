@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block content %}
+        <span>{{ article.category.title }}</span>
+        <br>
+        <strong>{{ article.title }}</strong>
+        <br>
+        <img src={{ article.thumbnail.url }} alt={{ article.title }} width="250"/>
+        <br>
+        <p>{{ article.full_description }}</p>
+        <br>
+        <small>{{ article.time_create }}</small>
+{% endblock %}
